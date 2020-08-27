@@ -22,7 +22,7 @@ const Service = ({serviceInfo}) =>{
             </center>
             <h3 className="h3 text-center text-primary">{service}</h3>
             <p className="text-center text-primary my-3">{description}</p>
-            <div className="mx-auto col-xl-5 my-5">
+            <div className="mx-auto col-xl-9 my-5">
                 <a className="btn btn-outline-primary col-lg-12">Learn more</a>
             </div>
         </div>

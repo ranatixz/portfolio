@@ -12,14 +12,14 @@ const About = () =>{
         <section className='about py-5'>
             <div className="container col-xl-9 my-5 py-5 mx-auto">
                 <div className="row">
-                    <div data-aos="fade-right" className="col-xl-6 col-md-6 col-sm-9 mx-auto">
+                    <div data-aos="fade-up" className="col-xl-6 col-md-6 col-sm-9 mx-auto">
                         <img 
                             className="img img-fluid col-xl-9" 
                             src={require('../../images/me.png')} 
                             alt="Handsome guy"
                         />
                     </div>
-                    <div data-aos="fade-left" className="col-xl-6 col-md-6 col-sm-9 text-primary py-5 mx-auto">
+                    <div data-aos="fade-up" className="col-xl-6 col-md-6 col-sm-9 text-primary py-5 mx-auto">
                         <p className="font-weight-bold mt-4">About Me</p>
                         <h2 className="h2 my-1 mb-4">Web Developer</h2>
                         <p className="my-3">
