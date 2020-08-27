@@ -1,0 +1,44 @@
+.home{
+    background: url('../../images/bg-sec-a.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(255,255,255, 0.5);
+    height: 100%;
+}
+.jumping-ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #797a7e;
+    padding: 0;
+    cursor: pointer;
+}
+.down{
+    color: #e0ece4;
+    margin-left: 13px;
+    margin-top: 15px;
+}
+.jump{
+    animation: heyjump 2s infinite;
+}
+@keyframes heyjump{
+    0%{transform: translateY(0px);}
+    50%{transform:translateY(-15px);}
+    100%{transform: translateY(-0px);}
+}
+.min-jump{
+    animation: min-jump 2s infinite;
+}
+@keyframes min-jump{
+    0%{transform: translateY(0px);}
+    50%{transform:translateY(-5px);}
+    100%{transform: translateY(-0px);}
+}
+

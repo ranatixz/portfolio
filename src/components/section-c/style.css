@@ -1,0 +1,7 @@
+.service-item{
+    background-color: #e0ece4;
+    transition: .3s;
+}
+.service-item:hover{
+    background-color: #f7f2e7;
+}
