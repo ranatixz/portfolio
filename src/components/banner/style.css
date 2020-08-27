@@ -1,11 +1,11 @@
-.home{
+.banner{
     background: url('../../images/bg-c-sec-a.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     height: 100%;
 }
-.home::before{
+.banner::before{
     content: "";
     position: absolute;
     left: 0; right: 0;

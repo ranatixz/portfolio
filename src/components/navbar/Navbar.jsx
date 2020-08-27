@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import Link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
@@ -18,6 +18,7 @@ const Navbar = () =>{
       }else{
         setNavBar(false)
       }
+      // console.log(window.scrollY)
     }
 
     window.addEventListener('scroll', changeBackGround)
@@ -42,16 +43,16 @@ const Navbar = () =>{
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="about-me">About me</a>
+                <Link className="nav-link" to="/about">About me</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Services</a>
+                <Link className="nav-link" to="/services">Services</Link>
               </li>
               <li className="nav-item">
-                 <a className="nav-link" href="#">Portfolio</a>
+                 <Link className="nav-link" to="/portfolio">Portfolio</Link>
               </li>
             </ul>
           </div>

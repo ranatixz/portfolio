@@ -1,20 +1,33 @@
 import React from 'react'
-import Navbar from './components/navbar/Navbar'
-import Home from './components/section-a/Home'
-import About from './components/section-b/About'
-import Services from './components/section-c/Services'
-import Portfolio from './components/section-d/Portfolio'
+// import Navbar from './components/navbar/Navbar'
+// import Banner from './components/banner/Banner'
+// import About from './components/about/About'
+// import Services from './components/service/Services'
+// import Portfolio from './components/portfolio/Portfolio'
+import Index from './pages/Index'
+import AboutPage from './pages/AboutPage'
+import ServicesPage from './pages/ServicesPage'
+import PortfolioPage from './pages/PortfolioPage'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+// const App = () =>{
+//   return <Index/>
+// }
 
-const App = () =>{
-  return (
-      <React.Fragment>
-        <Navbar/>
-        <Home/>
-        <About/>
-        <Services/>
-        <Portfolio/>
-      </React.Fragment>
-  )
-}
+// export default App
+const PageNotFound = () =>(
+  <h1 className="text-primary">404 | Page not found</h1>
+)
 
-export default App
+const Routes = (
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={Index} exact={true}/>
+      <Route path="/about" component={AboutPage}/>
+      <Route path="/services" component={ServicesPage}/>
+      <Route path="/portfolio" component={PortfolioPage}/>
+      <Route component={PageNotFound}/>
+    </Switch>
+  </BrowserRouter>
+);
+
+export default Routes
