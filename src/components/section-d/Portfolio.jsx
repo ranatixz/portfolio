@@ -3,9 +3,11 @@ import React from 'react'
 const Portfolio = () =>{
     return (
         <section className="portfolio my-5 py-2">
-            <div className="container my-5 py-2">
-                <p className="font-weight-bold text-primary mb-3">My Portfolio</p>
-                <h1 className="text-primary">Check My Recent <br/> Works</h1>
+            <div className="container col-xl-12 my-1 py-1 mx-auto">
+                <div className="col-xl-10 mx-auto px-2 my-5">
+                     <p className="text-primary font-weight-bold">My Portfolio</p>
+                     <h2 className="text-primary">Check My Recent <br/> Works</h2>
+                </div>
                 <div className="row">
                     <div className="col-xl-6">
                         <img 
@@ -21,5 +23,5 @@ const Portfolio = () =>{
         </section>
     )
 }
-
+   
 export default Portfolio
