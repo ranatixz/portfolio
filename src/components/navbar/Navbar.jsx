@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 // import Link from 'react-router-dom'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import './style.css'
 
 const Navbar = () =>{
 
@@ -12,12 +13,11 @@ const Navbar = () =>{
     }, [])
 
     const changeBackGround = () =>{
-      if(window.scrollY >= 170){
+      if(window.scrollY >= 612){
         setNavBar(true)
       }else{
         setNavBar(false)
       }
-      console.log(navBar)
     }
 
     window.addEventListener('scroll', changeBackGround)
@@ -25,7 +25,7 @@ const Navbar = () =>{
     const navClass = () =>{
       let classes = "navbar fixed-top navbar-expand-lg navbar-light px-4 "
       if(navBar){
-        classes += "bg-white py-4"
+        classes += "bg-white py-4 shadow"
       }else if(!navBar){
         classes += "bg-none py-3"
       }

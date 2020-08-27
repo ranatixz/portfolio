@@ -7,7 +7,7 @@ import 'aos/dist/aos.css'
 const Service = ({serviceInfo}) =>{
 
     useEffect(()=>{
-        Aos.init({duration: 2000})
+        Aos.init({duration: 1200})
     }, [])
 
     const {img, service, description} = serviceInfo
