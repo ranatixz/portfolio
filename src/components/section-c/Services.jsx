@@ -16,7 +16,7 @@ const Services = () =>{
         },
         {
             img: 's3.png',
-            service: 'Dektop App',
+            service: 'Desktop App',
             description: 'I can build a desktop app just like point of sale, banking and etc. in a modern user interface.'
         }
     ])
