@@ -22,9 +22,10 @@ const Routes = (
   <BrowserRouter>
     <Switch>
       <Route path="/" component={Index} exact={true}/>
+      <Route path="/portfolio" component={Index} exact={true}/>
       <Route path="/about" component={AboutPage}/>
       <Route path="/services" component={ServicesPage}/>
-      <Route path="/portfolio" component={PortfolioPage}/>
+      <Route path="/recent-works" component={PortfolioPage}/>
       <Route component={PageNotFound}/>
     </Switch>
   </BrowserRouter>
