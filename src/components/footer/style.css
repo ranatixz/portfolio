@@ -1,0 +1,33 @@
+footer{
+    box-shadow: 16px 16px 16px 16px rgba(0, 0, 0, 0.1);  
+}
+
+.footer-area .footer-social{
+    text-align: center;
+    margin: 5px 0px 30px;
+}
+
+.footer-area .footer-social a{
+    /* background: #e0ece4;
+    padding: 1px 17px 1px 17px;
+    text-align: center;
+    line-height: 45px;
+    color: #797a7e;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 18px; */
+    display: inline-block;
+    width: 46px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: #e0ece4;
+    border-radius: 36px;
+    color: #797a7e;
+    font-size: 20px;
+    margin-right: 18px;
+    transition: .5s;
+}
+.footer-social a:hover{
+    background: #f7f2e7;
+}

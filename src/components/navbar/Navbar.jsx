@@ -10,6 +10,9 @@ const Navbar = () =>{
 
     useEffect(()=>{
       Aos.init({ duration:2000 })
+      // ,() =>{
+      //   window.removeEventListener(changeBackGround)
+      // }
     }, [])
 
     const changeBackGround = () =>{
@@ -26,9 +29,9 @@ const Navbar = () =>{
     const navClass = () =>{
       let classes = "navbar fixed-top navbar-expand-lg navbar-light px-4 "
       if(navBar){
-        classes += "bg-white py-4 shadow"
+        classes += "bg-white py-3 shadow"
       }else if(!navBar){
-        classes += "bg-none py-3"
+        classes += "bg-none py-2"
       }
       return classes
     }
@@ -36,7 +39,9 @@ const Navbar = () =>{
     return (
       <nav style={{transition: ".3s"}} className={navClass()}>
         <div className="container">
-          <a className="navbar-brand" href="#">Logo</a>
+          <a className="navbar-brand" href="#">
+            <img src={require('../../logo/logo-a.svg')}/>
+          </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
