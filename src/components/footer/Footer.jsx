@@ -42,10 +42,10 @@ const Footer = () =>{
                             <i className="fab fa-youtube"></i>
                         </a>
                         <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHxwFWgGscwHvRHBzKxCDZLfmxqwndksDXlCVKQxQFMWqFnfHxwPFsXMdcRqmzHJSMfMZMT">
-                            <i class="far fa-envelope"></i>
+                            <i className="far fa-envelope"></i>
                         </a>
                         <a href="https://github.com/ranatixz">
-                            <i class="fab fa-github"></i>
+                            <i className="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
