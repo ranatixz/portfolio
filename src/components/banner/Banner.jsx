@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './style.css'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import useAos from '../../hooks/useAos'
+
 
 const Banner = ({text}) =>{
 
-    useEffect(()=>{
-        Aos.init({duration: 1200})
-    }, [])
+    useAos(1200)
 
     return (
        <section className='banner py-5'> 

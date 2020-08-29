@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import './style.css'
+
 
 const Navbar = () =>{
 
     const [navBar, setNavBar] = useState(false)
-
-    useEffect(()=>{
-      Aos.init({ duration:2000 })
-      // ,() =>{
-      //   window.removeEventListener(changeBackGround)
-      // }
-    }, [])
 
     const changeBackGround = () =>{
       if(window.scrollY >= 612){

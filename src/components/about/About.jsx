@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import React from 'react'
+import useAos from '../../hooks/useAos'
 
 const About = () =>{
 
-    useEffect(()=>{
-        Aos.init({duration: 1200})
-    }, [])
+   useAos(1200)
 
     return (
         <section className='about py-5'>
