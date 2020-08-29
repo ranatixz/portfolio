@@ -14,11 +14,11 @@ const Portfolio = () =>{
                 </div>
                 <div className="col-xl-9 my-2 mx-auto">
                     <div className="row my-5">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-10 mx-auto d-flex justify-content-center my-3 py-1">
+                        <div className="col-xl-6 col-lg-6 col-md-6 mx-auto d-flex justify-content-center my-3 py-1">
                             <div data-aos="fade-up" className="card h-100 d-inline-block">
                                 <div className="card-body d-flex justify-content-center">
                                     <img 
-                                        className="col-xl-6" 
+                                        className="col-xl-6 col-9" 
                                         src={require('../../images/ieqms.png')}
                                     />
                                 </div>
