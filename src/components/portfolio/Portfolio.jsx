@@ -18,7 +18,8 @@ const Portfolio = () =>{
                             <div data-aos="fade-up" className="card h-100 d-inline-block">
                                 <div className="card-body d-flex justify-content-center">
                                     <img 
-                                        className="col-xl-6 col-9" 
+                                        className="col-xl-6" 
+                                        style={{height: "300px"}}
                                         src={require('../../images/ieqms.png')}
                                     />
                                 </div>
