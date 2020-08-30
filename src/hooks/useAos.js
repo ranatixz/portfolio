@@ -5,7 +5,7 @@ const useAos = (duration) =>{
 
     useEffect(()=>{
         Aos.init({duration: duration})
-    }, [])
+    }, [duration])
 
 }
 

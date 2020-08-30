@@ -1,10 +1,36 @@
-import React from 'react'
-import useAos from '../../hooks/useAos'
+import React, { useState, useEffect } from 'react'
+import Works from './Works'
+import Data from '../../data/data'
+import useComponentWillMount from '../../hooks/useComponentWillMount'
+
+export const ItemContext = React.createContext()
+export const ButtonFunctionsContext = React.createContext()
 
 const Portfolio = () =>{
 
-    useAos(1200)
+    const [project, setProject] = useState({})
+    const [item, setItem] = useState(0)
+    
+    useEffect(()=>{
+        setProject(Data.projects[item])
+    }, [item])
+    
+    useComponentWillMount(()=>{
+        setProject(Data.projects[0])
+    })
 
+    const nextItemHandler = () => {
+        if(item === Data.projects.length -1){
+            console.log('stop')
+        }else{
+            setItem(prevItem => prevItem + 1)
+        }    
+    }
+
+    const backItemHandler = () =>{
+        setItem(prevItem => prevItem -1)
+    }
+  
     return (
         <section className="portfolio my-5 py-2">
             <div className="container col-xl-12 my-1 py-1 mx-auto">
@@ -13,43 +39,14 @@ const Portfolio = () =>{
                      <h2 className="text-primary">Check My Recent <br/> Works</h2>
                 </div>
                 <div className="col-xl-9 my-2 mx-auto">
-                    <div className="row my-5">
-                        <div className="col-xl-6 col-lg-6 col-md-6 d-flex justify-content-center my-3 py-1">
-                            <div data-aos="fade-up" className="card h-100 d-inline-block">
-                                <div className="card-body d-flex justify-content-center">
-                                    <img 
-                                        className="col-xl-6" 
-                                        src={require('../../images/ieqms.png')}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 my-3 py-1">
-                            <div data-aos="fade-up" className="h-75 mt-3">
-                                <h5 className="text-primary text-center mb-2">IEQMS</h5>
-                                <p className="text-primary">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis
-                                    nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat.
-                                    Duis aute irure dolor in reprehenderit
-                                    in voluptate velit esse cillum dolore
-                                    eu fugiat nulla pariatur.
-                                </p>
-                            </div>
-                            <div className="row d-flex justify-content-between">
-                                <div className="col-xl-3 col-lg-4 col-md-6 my-1 align-self-start">
-                                    <button className="col-xl-12 btn btn-outline-primary">Back</button>
-                                </div>
-                                <div className="col-xl-3 col-lg-4 col-md-6 my-1 align-self-start">
-                                    <button className="col-xl-12 btn btn-primary">Next</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ItemContext.Provider value={item}>
+                        <ButtonFunctionsContext.Provider value={{nextItemHandler, backItemHandler}}>
+                            <Works 
+                                projectDetails={project}
+                                nextItemHandler={nextItemHandler}
+                            />     
+                        </ButtonFunctionsContext.Provider>
+                    </ItemContext.Provider>
                 </div>
             </div>
         </section>
