@@ -28,7 +28,7 @@ const Works = ({projectDetails}) =>{
                         timeout={1000}
                         classNames={"fade-appear"}
                     >
-                        <div className="d-flex justify-content-center">
+                        <div className="d-flex justify-content-center mt-3">
                             <img 
                                 className="col-xl-12" 
                                 src={require(`../../images/${img}`)}
@@ -38,7 +38,7 @@ const Works = ({projectDetails}) =>{
                 </div>       
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 my-3 py-1">
-                <div data-aos="fade-up" className="mt-5 mb-4">
+                <div data-aos="fade-up" className="mt-1 mb-4">
                     <h5 className="text-primary text-center my-3">{projectName}</h5>
                     <p className="text-primary my-2">{description}</p>
                     <div className="my-2">

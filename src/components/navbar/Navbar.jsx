@@ -20,9 +20,9 @@ const Navbar = () =>{
     const navClass = () =>{
       let classes = "navbar fixed-top navbar-expand-lg navbar-light px-4 "
       if(navBar){
-        classes += "bg-white py-3 shadow"
+        classes += "bg-white py-2 shadow"
       }else if(!navBar){
-        classes += "bg-none py-2"
+        classes += "bg-none py-1"
       }
       return classes
     }

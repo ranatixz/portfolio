@@ -6,8 +6,8 @@ const About = () =>{
    useAos(1200)
 
     return (
-        <section className='about py-5'>
-            <div className="container col-xl-9 my-5 py-5 mx-auto">
+        <section className='about pt-5 pb-1'>
+            <div className="container col-xl-9 mt-5 mb-2 py-5 mx-auto">
                 <div className="row">
                     <div data-aos="fade-up" className="col-xl-6 col-md-6 col-sm-9 mx-auto">
                         <img 
