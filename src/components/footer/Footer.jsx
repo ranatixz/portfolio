@@ -4,7 +4,7 @@ import './style.css'
 
 const Footer = () =>{
     return (
-        <footer className="footer-area">
+        <footer className="footer-area mt-5">
             <div className="bg-primary mt-5 py-3">
                 <div className="container my-3 py-5">
                     <div className="d-flex justify-content-center">

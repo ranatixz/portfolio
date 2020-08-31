@@ -65,16 +65,16 @@ const Data = {
       technology: `HTML5, CSS3,
       jQuery, Php, MySQL`
     },
-    {
-      img: 'todo.png',
-      projectName: 'TODO',
-      description:
-        `Todo is a web application that the users can
-        make a todo list and they can update or delete those
-        todos that they've created.`,
-      technology: `HTML5, CSS3,
-      Bootstrap, Reactjs`
-    }
+    // {
+    //   img: 'todo.png',
+    //   projectName: 'TODO',
+    //   description:
+    //     `Todo is a web application that the users can
+    //     make a todo list and they can update or delete those
+    //     todos that they've created.`,
+    //   technology: `HTML5, CSS3,
+    //   Bootstrap, Reactjs`
+    // }
   ]
     
 
