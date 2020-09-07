@@ -11,7 +11,7 @@ const RowA = ({workDetails}) =>{
     } = workDetails
     
     return (
-        <div data-aos='fade-up' className="row my-3 py-2">
+        <div data-aos='fade-up' className="row my-5 py-2">
             <div className="col-xl-6 col-lg-6 mx-auto my-1">
                 <div className="mx-auto">
                     <img 

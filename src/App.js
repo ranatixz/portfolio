@@ -3,6 +3,7 @@ import Index from './pages/Index'
 import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
 import PortfolioPage from './pages/PortfolioPage'
+import ContactPage from './pages/ContactPage'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 
@@ -22,6 +23,7 @@ const Routes = (
       <Route path="/about" component={AboutPage}/>
       <Route path="/services" component={ServicesPage}/>
       <Route path="/recent-works" component={PortfolioPage}/>
+      <Route path="/contact" component={ContactPage}/>
       <Route component={PageNotFound}/>
     </Switch>
     <Footer/>

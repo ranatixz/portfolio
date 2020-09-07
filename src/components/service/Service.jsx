@@ -10,7 +10,7 @@ const Service = ({serviceInfo}) =>{
     const {img, service, description, link} = serviceInfo
 
     return (
-        <div data-aos="fade-up" className="service-item col-xl-3 col-lg-3 col-md-5 col-sm-9 mx-1 mt-3 my-2 py-4">
+        <div data-aos="fade-up" className="service-item col-xl-3 col-lg-3 col-md-5 col-sm-9 col-9 mx-1 mt-3 my-2 py-4">
             <center>
                 <img 
                     className="img img-rounded-circle col-xl-4 col-lg-6 col-md-6 col-sm-4 col-5 my-3" 

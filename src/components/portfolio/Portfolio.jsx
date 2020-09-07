@@ -8,13 +8,13 @@ const Portfolio = () =>{
     const { projects } = Data
     
     return (
-        <section className="portfolio my-5 py-2">
-            <div className="container col-xl-12 my-1 py-1 mx-auto">
+        <section className="portfolio mt-5 mb-2 py-2">
+            <div className="container col-xl-12 my-1 pt-4 pb-1 mx-auto">
                 <div className="col-xl-10 mx-auto px-2">
                      <p className="text-primary font-weight-bold">My Portfolio</p>
                      <h2 className="text-primary">Check My Recent <br/> Works</h2>
                 </div>
-                <div className="my-5 py-5">
+                <div className="mt-4 mb-1 py-2">
                     <div className="col-xl-9 mx-auto">
                         {
                             projects.map((project, index) =>{
