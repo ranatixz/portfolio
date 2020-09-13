@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "846e094d9fa4090c965f9b1a4308e115",
+    "revision": "a0315296508487a95dd2d100c6466cf6",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "c9c9274ce6827bdf2fad",
+    "revision": "7ecd14e41a185c61213a",
     "url": "/portfolio/static/css/2.e11bcdf1.chunk.css"
   },
   {
-    "revision": "9a0586c4e0cf6b78a6da",
-    "url": "/portfolio/static/css/main.3a8bb6f7.chunk.css"
+    "revision": "469767e722b1e380e45d",
+    "url": "/portfolio/static/css/main.ce086ab1.chunk.css"
   },
   {
-    "revision": "c9c9274ce6827bdf2fad",
-    "url": "/portfolio/static/js/2.4827edc2.chunk.js"
+    "revision": "7ecd14e41a185c61213a",
+    "url": "/portfolio/static/js/2.2f3cf623.chunk.js"
   },
   {
-    "revision": "031b62b957b4fb917cd0ec81e2c8bd7b",
-    "url": "/portfolio/static/js/2.4827edc2.chunk.js.LICENSE.txt"
+    "revision": "77e7f328dacc981fca681ee4ae94d669",
+    "url": "/portfolio/static/js/2.2f3cf623.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9a0586c4e0cf6b78a6da",
-    "url": "/portfolio/static/js/main.d5fdf3d0.chunk.js"
+    "revision": "469767e722b1e380e45d",
+    "url": "/portfolio/static/js/main.79615abb.chunk.js"
   },
   {
     "revision": "d99e319ac88e979ae50b",
@@ -112,6 +112,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/ieqms.1c7925bc.png"
   },
   {
+    "revision": "7cc4365876defb0800d2f1c569fd25d0",
+    "url": "/portfolio/static/media/inventoryOfMalalag.7cc43658.PNG"
+  },
+  {
     "revision": "b9fe73a6a2d50e96751636360201ccb2",
     "url": "/portfolio/static/media/logo-a.b9fe73a6.svg"
   },
@@ -124,7 +128,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/me.e7a3c612.png"
   },
   {
+    "revision": "9b4ba120ebb8526a0578aec6044efc84",
+    "url": "/portfolio/static/media/momshies.9b4ba120.png"
+  },
+  {
     "revision": "feed3e1eacf37cf93ad0bbc2521ffeff",
     "url": "/portfolio/static/media/musicave.feed3e1e.png"
+  },
+  {
+    "revision": "50099124fda669861024644fc0feb4b1",
+    "url": "/portfolio/static/media/todo.50099124.PNG"
   }
 ]);
