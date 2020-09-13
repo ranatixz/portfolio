@@ -65,16 +65,39 @@ const Data = {
       technology: `HTML5, CSS3,
       jQuery, Php, MySQL`
     },
-    // {
-    //   img: 'todo.png',
-    //   projectName: 'TODO',
-    //   description:
-    //     `Todo is a web application that the users can
-    //     make a todo list and they can update or delete those
-    //     todos that they've created.`,
-    //   technology: `HTML5, CSS3,
-    //   Bootstrap, Reactjs`
-    // }
+    {
+      img: 'todo.PNG',
+      projectName: 'TODO',
+      description:
+        `Todo is a web application that the users can
+        make a todo list and they can update or delete those
+        todos that they've created.`,
+      technology: `HTML5, CSS3,
+      Bootstrap, Reactjs`
+    },
+    {
+      img: 'inventoryOfMalalag.PNG',
+      projectName: 'Inventory Of Malalag',
+      description:
+        `Inventory of malalag is an desktop application
+        that the uses allow to manage their products just like
+        adding product and it's quantity, deleting product and updating
+        product details. The applications has a monitoring window
+        to monitor the actions of the specific users.`,
+      technology: `C#, Bunifu UI Framework,
+       Fontawesome, Microsoft SQL Server`
+    },
+    {
+      img: 'momshies.png',
+      projectName: 'Momshies Laundry',
+      description:
+        `Momshies Laundry is an desktop application that 
+        helps the owner of the laundry shop to monitored their
+        sales and it has a staff management inside the application
+        to determine the staffs working hours by the owner.`,
+      technology: `C#, Bunifu UI Framework,
+       Fontawesome, Microsoft SQL Server`
+    }
   ]
     
 

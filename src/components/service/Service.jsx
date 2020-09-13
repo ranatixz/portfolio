@@ -15,6 +15,7 @@ const Service = ({serviceInfo}) =>{
                 <img 
                     className="img img-rounded-circle col-xl-4 col-lg-6 col-md-6 col-sm-4 col-5 my-3" 
                     src={require(`../../icons/${img}`)}
+                    alt={service}
                 />
             </center>
             <h3 className="h3 text-center text-primary">{service}</h3>

@@ -27,7 +27,6 @@ const Routes = (
       <Route component={PageNotFound}/>
     </Switch>
     <Footer/>
-
   </BrowserRouter>
 );
 

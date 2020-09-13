@@ -27,6 +27,7 @@ const RowB = ({workDetails}) =>{
                     <img 
                         className="col-xl-12" 
                         src={require(`../../images/${img}`)}
+                        alt={projectName}
                     />
                 </div>
             </div>
