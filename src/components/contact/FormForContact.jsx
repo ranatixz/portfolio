@@ -1,45 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as  Yup from 'yup'
-import Regex from '../../regex/regex'
+import firebase from '../../firebase/base'
+import { v4 as uuid }  from 'uuid'
+import { initialValues, validationSchema } from './FormikPropData'
+import Error from '../alerts/Error'
+import Loading from '../alerts/Loading'
+import Success from '../alerts/Success'
 import './style.css'
 
 
-const { nameReg } = Regex
-
-const initialValues = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-}
-
-const onSubmit = values =>{
-    alert('Thank you for touching me. Have a nice day!')
-    document.getElementById('contact-form').reset()
-    //kulang og legit na reset sa form og sa state//
-    //ipasa ang data sa api kulang sad//
-}
-
-const validationSchema = Yup.object({
-    name: Yup.string()
-        .matches(nameReg, 'Invalid name')
-        .min(3, 'Must contain 3 or more characters')
-        .required('Required'),
-    email: Yup.string().email('Invalid email')
-        .min(8, 'Must contain 8 or more characters')
-        .required('Required'),
-    subject: Yup.string()
-        .min(3, 'Must contain 3 or more characters')
-        .required('Required'),
-    message: 
-        Yup.string()
-           .min(3, 'Must contain 3 or more characters')
-           .required('Required')
-})
-
 const FormForContact = () =>{
 
+    const [isErr, setIsErr] = useState(false)
+    const [isSuccess, setIsSuccess] = useState(false)
+    
     const getClassHandler = (error, touched) =>{
         let className = 'form-control'
 
@@ -49,19 +23,61 @@ const FormForContact = () =>{
 
         return className
     }
+
+    const onFocusHandler = () =>{
+        setIsSuccess(false)
+        setIsErr(false)
+    }
+
+    const addQuery = async (values) =>{
+        const {
+            name, email,
+            subject, message
+        } = values
+
+        await firebase.firestore().collection('queries').add({
+            id: uuid(),
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            date: new Date().toLocaleString()
+        })
+        .then((response)=>{
+            setIsSuccess(true)
+        })
+        .catch(err =>{
+            setIsErr(true)
+        })
+       
+    }
     
     return (
         <div className="col-xl-8 col-lg-8 form-contact mb-3">
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={onSubmit}
+                onSubmit = {
+                    async (values, {resetForm}) =>{
+                        await addQuery(values)
+                        resetForm()
+                    } 
+                }
             >  
             {
                 formikProps =>{
-                    const { errors, touched } = formikProps
+                    const { errors, touched, isSubmitting } = formikProps
                     return(
                         <Form id='contact-form'>
+                            {
+                               isSubmitting && <Loading message="Submitting query.."/>
+                            }
+                            {
+                                isSuccess && <Success message="Success!"/>
+                            }
+                            {
+                                isErr && <Error message="Something went wrong!"/>
+                            }
                             <div className="row">
                                 <div className="col-12">
                                     <div className="form-group">
@@ -72,6 +88,7 @@ const FormForContact = () =>{
                                             cols="30"
                                             rows="6"
                                             name="message"
+                                            onFocus={onFocusHandler}
                                         />
                                         <ErrorMessage 
                                             className="error"
@@ -86,6 +103,7 @@ const FormForContact = () =>{
                                             className={getClassHandler(errors.name, touched.name)}
                                             placeholder="Enter your name"
                                             name="name"
+                                            onFocus={onFocusHandler}
                                         />
                                         <ErrorMessage
                                             className="error"
@@ -100,6 +118,7 @@ const FormForContact = () =>{
                                             className={getClassHandler(errors.email, touched.email)}
                                             placeholder="Enter your email"
                                             name="email"
+                                            onFocus={onFocusHandler}
                                         />
                                         <ErrorMessage 
                                             className="error"
@@ -114,6 +133,7 @@ const FormForContact = () =>{
                                             className={getClassHandler(errors.subject, touched.subject)}
                                             placeholder="Enter subject"
                                             name="subject"
+                                            onFocus={onFocusHandler}
                                         />
                                         <ErrorMessage 
                                             className="error"

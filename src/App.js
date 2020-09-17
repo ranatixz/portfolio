@@ -6,7 +6,6 @@ import PortfolioPage from './pages/PortfolioPage'
 import ContactPage from './pages/ContactPage'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
-
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 
