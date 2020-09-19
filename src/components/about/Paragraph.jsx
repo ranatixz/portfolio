@@ -8,7 +8,7 @@ const Paragraph = () =>{
     return (
         <div data-aos="fade-up" className="col-xl-6 col-md-6 col-sm-9 text-primary py-5 mx-auto">
             <p className="font-weight-bold mt-4">About Me</p>
-            <h2 className="h2 my-1 mb-4">Web Developer</h2>
+            <h2 className="h2 my-1 mb-4">Software Developer</h2>
             <p className="my-3">
                 Hi! I am vincent lanchita I have a 1 year experience
                 in frontend development and capable in HTML5, CSS3,

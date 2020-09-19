@@ -5,7 +5,7 @@ import GoogleMap from '../google-map/GoogleMap'
 
 const Contact = () =>{
     return (
-       <section className="contact my-2 py-3">
+       <section className="contact mt-2 mb-5 py-3">
             <div className="container col-xl-12 mx-auto pt-4 pb-1">
                 <div className="col-xl-10 mx-auto">
                     <p className="text-primary font-weight-bold">Contact</p>
