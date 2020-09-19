@@ -24,7 +24,14 @@ const FormForContact = () =>{
         return className
     }
 
-    const onFocusHandler = () =>{
+    const timeOutHandler = () =>{
+        setTimeout(()=>{
+            setIsErr(false)
+            setIsSuccess(false)
+        }, 5000)
+    }
+
+    const setFalseHandler = () =>{
         setIsSuccess(false)
         setIsErr(false)
     }
@@ -45,9 +52,11 @@ const FormForContact = () =>{
         })
         .then((response)=>{
             setIsSuccess(true)
+            timeOutHandler()
         })
         .catch(err =>{
             setIsErr(true)
+            timeOutHandler()
         })
        
     }
@@ -88,7 +97,7 @@ const FormForContact = () =>{
                                             cols="30"
                                             rows="6"
                                             name="message"
-                                            onFocus={onFocusHandler}
+                                            onFocus={setFalseHandler}
                                         />
                                         <ErrorMessage 
                                             className="error"
@@ -103,7 +112,7 @@ const FormForContact = () =>{
                                             className={getClassHandler(errors.name, touched.name)}
                                             placeholder="Enter your name"
                                             name="name"
-                                            onFocus={onFocusHandler}
+                                            onFocus={setFalseHandler}
                                         />
                                         <ErrorMessage
                                             className="error"
@@ -118,7 +127,7 @@ const FormForContact = () =>{
                                             className={getClassHandler(errors.email, touched.email)}
                                             placeholder="Enter your email"
                                             name="email"
-                                            onFocus={onFocusHandler}
+                                            onFocus={setFalseHandler}
                                         />
                                         <ErrorMessage 
                                             className="error"
@@ -133,7 +142,7 @@ const FormForContact = () =>{
                                             className={getClassHandler(errors.subject, touched.subject)}
                                             placeholder="Enter subject"
                                             name="subject"
-                                            onFocus={onFocusHandler}
+                                            onFocus={setFalseHandler}
                                         />
                                         <ErrorMessage 
                                             className="error"
